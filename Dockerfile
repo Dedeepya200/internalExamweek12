@@ -1,7 +1,14 @@
-From python:3.9-slim
-workdir /app
-copy requirements.txt requirements.txt
-run pip install -r requirements.txt
-copy . .
-Expose 5003
-cmd ["python", "app.py"]
+
+FROM python:3.9-slim
+
+WORKDIR /app
+
+COPY requirements.txt requirements.txt
+
+RUN pip install -r requirements.txt
+
+COPY . .
+
+EXPOSE 5003
+
+CMD ["python", "app.py"]
