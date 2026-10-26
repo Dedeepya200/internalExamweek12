@@ -15,7 +15,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo 'Building Docker image...'
-                sh 'docker build -t dedeepya2001/selenium-app .'
+                sh 'docker build -t dedeepya200/selenium-app .'
             }
         }
 
