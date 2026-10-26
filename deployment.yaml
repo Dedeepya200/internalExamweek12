@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: selenium-container
-        image: dedeepya2001/selenium-app:latest
+        image: dedeepya200/selenium-app:latest
         ports:
         - containerPort: 5003
