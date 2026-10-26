@@ -37,7 +37,8 @@ pipeline {
         stage('Push Docker Image') {
             steps {
                 echo 'Pushing Docker image...'
-                sh 'docker push dedeepya2001/selenium-app:latest'
+                sh 'docker push dedeepya200/selenium-app:latest'
+                
             }
         }
 
