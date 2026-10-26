@@ -4,7 +4,7 @@
         <script>
             function validateForm() {
                 var username = document.getElementById("username").value;
-                var password = document.getElementById("password").value;
+                var password = document.getElementById("pwd").value;
 
                 if (username == "") {
                     alert("Username cannot be empty.");
@@ -29,7 +29,7 @@
             <input type="text" id="username" name="username" required>
             <br>
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+            <input type="password" id="password" name="pwd" required>
         
             <button type="submit">Register</button>
         </form>
