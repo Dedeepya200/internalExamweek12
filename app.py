@@ -8,7 +8,7 @@ def index():
 @app.route("/register", methods=["POST"])
 def register():
     username = request.form.get("username")
-    password = request.form.get("password")
+    password = request.form.get("pwd")
 
     return render_template("success.html", username=username)
 
