@@ -25,7 +25,7 @@ def test_empty_username(setup_teardown):
 
     driver.find_element(By.NAME, "username").clear()
     driver.find_element(By.NAME, "pwd").send_keys("Password123")
-    driver.find_element(By.NAME, "sb").click()
+    driver.find_element(By.TAG_NAME, "sb").click()
 
     time.sleep(1)
     alert_text = get_alert_text(driver)
@@ -38,7 +38,7 @@ def test_empty_password(setup_teardown):
 
     driver.find_element(By.NAME, "username").send_keys("Dedeepya")
     driver.find_element(By.NAME, "pwd").clear()
-    driver.find_element(By.NAME, "sb").click()
+    driver.find_element(By.TAG_NAME, "submit").click()
 
     time.sleep(1)
     alert_text = get_alert_text(driver)
@@ -51,7 +51,7 @@ def test_short_password(setup_teardown):
 
     driver.find_element(By.NAME, "username").send_keys("Dedeepya")
     driver.find_element(By.NAME, "pwd").send_keys("abc1")
-    driver.find_element(By.NAME, "sb").click()
+    driver.find_element(By.TAG_NAME, "submit").click()
 
     time.sleep(1)
     alert_text = get_alert_text(driver)
@@ -64,7 +64,7 @@ def test_valid_input(setup_teardown):
 
     driver.find_element(By.NAME, "username").send_keys("Dedeepya")
     driver.find_element(By.NAME, "pwd").send_keys("abc123")
-    driver.find_element(By.NAME, "sb").click()
+    driver.find_element(By.TAG_NAME, "submit").click()
 
     time.sleep(2)
 
