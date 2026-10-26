@@ -5,9 +5,10 @@ pipeline {
     stages {
         stage('Run selenium test') {
             steps {
-                sh 'pip3 install -r requirements.txt'
+                sh 'python3 -m pip install -r requirements.txt'
+                sh 'nohup python3 app.py > flask.log 2>&1 &'
                 sh 'sleep 5'
-                sh 'python3 -m pytest test_selenium.py'
+                sh 'python3 -m pytest -v'
             }
         }
 
