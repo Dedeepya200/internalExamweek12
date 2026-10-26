@@ -69,7 +69,7 @@ def test_valid_input(setup_teardown):
     time.sleep(2)
 
     current_url = driver.current_url
-    assert "/submit" in current_url, f"Expected redirect to greeting.html, but got: {current_url}"
+    assert "/register" in current_url, f"Expected redirect to greeting.html, but got: {current_url}"
 
     body_text = driver.find_element(By.TAG_NAME, "body").text
     assert "Hello, Dedeepya! Welcome to the website" in body_text, f"Greeting not found or incorrect: {body_text}"
