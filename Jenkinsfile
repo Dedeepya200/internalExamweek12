@@ -15,7 +15,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo 'Building Docker image...'
-                sh 'docker build -t selenium:latest .'
+                sh 'docker build -t selenium-app:latest .'
             }
         }
 
@@ -37,6 +37,7 @@ pipeline {
         stage('Push Docker Image') {
             steps {
                 echo 'Pushing Docker image...'
+                sh 'docker tag selenium-app:latest dedeepya200/selenium-app:latest'
                 sh 'docker push dedeepya200/selenium-app:latest'
                 
             }
